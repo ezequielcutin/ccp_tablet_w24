@@ -152,3 +152,56 @@ h3{
     }
   }
 
+
+  /* Tablet view adjustments */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body, p {
+        font-size: 18px; /* Adjust base font size */
+    }
+
+    nav ul li {
+        margin-right: 50px; /* Increase spacing between nav links */
+    }
+
+    nav ul li a {
+        font-size: 1.4em; /* Increase nav link font size */
+    }
+
+    .main-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust grid for better spacing */
+    }
+
+    h1, h2, h3 {
+        font-size: calc(1em + 1vw); /* Responsive font sizes */
+    }
+
+    .main-picture {
+        width: 80%; /* Adjust main image width for better display */
+    }
+
+
+    /* Styling links with animated underline */
+    nav ul li a {
+        position: relative;
+        color: white;
+        text-decoration: none;
+    }
+
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+    }
+
+    nav ul li a:hover::after, nav ul li a:focus::after {
+        visibility: visible;
+        width: 100%;
+    }
+
+}
